@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="clock">
+    <div th:if="${number != null}">
+        <p th:if="${isPrime}" th:text="${number}は素数です。"></p>
+        <p th:if="${!isPrime}" th:text="${number}は素数ではありません。"></p>
+    </div>
+    <form>
+        <input type="text" id="number" name="number">
+        <input type="submit">
+    </form>
+</div>
+
+</body>
+</html>
